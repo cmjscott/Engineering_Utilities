@@ -7,8 +7,8 @@
 'Modified Date: 01/04/2006
 'Version: 4 
 
-Imports System.Web
-Imports System.Data.SqlClient
+
+Imports System.Data.Sql
 Imports System.Data.SqlClient
 
 Public Class DBAccess
@@ -26,7 +26,8 @@ Public Class DBAccess
 
     Public Function GetConnectionString() As String
 
-        dbCs = Configuration.ConfigurationManager.ConnectionStrings("PALDBConnectionString").ConnectionString
+        dbCs = Configuration.Configure
+        'Configuration.ConfigurationManager.ConnectionStrings("PALDBConnectionString").ConnectionString
 
         GetConnectionString = dbCs
 
